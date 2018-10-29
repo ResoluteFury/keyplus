@@ -29,7 +29,10 @@ git clone https://github.com/ahtn/keyplus
 git checkout v0.3.0
 ```
 
-Next, install the packages `gcc-avr`, `avr-libc`, `binutils-avr`, `python3`, `make`, `python3-pyqt5`, and `python3-pip`. Also need `hidapi` __or__ `libhidapi-dev`.
+Next, install the packages `gcc-avr`, `avr-libc`, `binutils-avr`, `python3`, `make`, `python3-pyqt5`, and `python3-pip`. Also need `hidapi` __or__ `libhidapi-dev`. For 18.04, use the command:
+```bash
+sudo apt install gcc-avr avr-libc binutils-avr python3 python3-pyqt5 python3-pip make libhidapi-dev
+```
 
 Then, install the python dependencies:
 ```bash
