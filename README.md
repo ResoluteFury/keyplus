@@ -29,11 +29,11 @@ git clone https://github.com/ahtn/keyplus
 git checkout v0.3.0
 ```
 
-Next, install the packages `avr-gcc`, `avr-libc`, `avr-binutils`, `python3`, `make`, `hidapi` or `libhidapi-dev`, and `python3-pyqt5`.
+Next, install the packages `gcc-avr`, `avr-libc`, `binutils-avr`, `python3`, `make`, `python3-pyqt5`, and `python3-pip`. Also need `hidapi` __or__ `libhidapi-dev`.
 
 Then, install the python dependencies:
 ```bash
-pip install -U --user keyplus
+pip3 install -U --user keyplus
 ```
 
 Also, you need to initialize the git submodules:
@@ -48,6 +48,12 @@ Now, you can run the program:
 ```bash
 cd host-software
 sudo python3 keyplus_flasher.py
+```
+
+Note: If, when you run the gui, the window is blank and the terminal shows "X Error: BadAccess (attempt to access private resource denied) 10", there is a workaround to disable the MIT-SHM module for QT. Simply start the flasher with the following command:
+
+```bash
+sudo QT_X11_NO_MITSHM=1 python3 keyplus_flasher.py
 ```
 
 #### Flashing without sudo on Linux
